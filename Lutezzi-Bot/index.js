@@ -11,15 +11,6 @@ for (const file of commandFiles) {
     const command = require(`./commands/${file}`)
     client.commands.set(command.name, command)
 }
-//Botun durumunu sürekli değiştirir.
-/*var setStatus = [
-    "made by Lutezzi 😈",
-    ".help"
-]
-setInterval (function() {
-    var random = Math.floor(Math.random()*(setStatus.length-0+1)+0);
-    client.user.setActivity(setStatus[random], {type: 'PLAYING'});
-}, 1 * 2000);*/
 
 //Gelen mesajların loga düşmesini sağlar.
 client.on("message", (message => {
