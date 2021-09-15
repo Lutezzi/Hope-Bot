@@ -12,11 +12,9 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command)
 }
 
-//Gelen mesajların loga düşmesini sağlar.
 client.on("message", (message => {
     console.log('Messages: '+ message.content)
     client.user.setStatus('idle');
-    client.user.setPresence({ activity: {name: "made by Lutezzi 😈"}, status: "idle"});
 }));
 
 client.on('ready', () => {
